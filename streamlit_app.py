@@ -31,4 +31,4 @@ st.write(data)
 
 
 st.subheader('날짜별 기온 그래프')
-st.line_chart(df['기온'])
+st.line_chart(df['기온':'체감온도'])
