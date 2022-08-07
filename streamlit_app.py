@@ -26,3 +26,4 @@ option = st.selectbox(
     (df['일자']))
 
 data = df.loc[(df['일자'] == option)] 
+st.write(data)
