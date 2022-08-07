@@ -15,3 +15,4 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 st.title("Streamlit Test")
+data = pd.read_csv('./STCS_체감온도.csv', encoding='cp949')
