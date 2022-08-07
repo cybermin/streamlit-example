@@ -19,3 +19,10 @@ df = pd.read_csv('./STCS_체감온도.csv', encoding='cp949')
 if st.checkbox('Show raw data'):
     st.subheader('Raw data')
     st.write(df)
+    
+st.subheader('날짜별 체감온도')
+option = st.selectbox(
+    'Select Line', 
+    (df['일자']))
+
+data = df.loc[(df['일자'] == option)] 
