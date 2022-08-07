@@ -19,7 +19,8 @@ df = pd.read_csv('./STCS_체감온도.csv', encoding='cp949')
 if st.checkbox('Show raw data'):
     st.subheader('Raw data')
     st.write(df)
-    
+ 
+df.columns = ['일자',	'기온', '습도',	'체감온도']
 st.subheader('날짜별 체감온도')
 option = st.selectbox(
     'Select Line', 
@@ -27,3 +28,7 @@ option = st.selectbox(
 
 data = df.loc[(df['일자'] == option)] 
 st.write(data)
+
+
+st.subheader('날짜별 기온 그래프')
+st.line_chart(df['기온'])
